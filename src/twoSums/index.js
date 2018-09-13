@@ -9,7 +9,16 @@
  * twoSums([5, 9, 3], 12); // [9, 3]
  */
 const twoSums = (arr, base) => {
-  /* your logic here...*/
+  const mass = [];
+  arr.forEach((item, index, arr) => {
+    arr.forEach(el => {
+      if (item + el === base) {
+        mass.push(item);
+        mass.push(el);
+      }
+    });
+  });
+  return mass.splice(0, 2);
 };
 
 export default twoSums;

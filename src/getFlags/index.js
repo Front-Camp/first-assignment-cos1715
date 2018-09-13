@@ -6,7 +6,11 @@
  * getFlags(arr); // [1, 2, 3, 4, 5, 6]
  */
 const getFlags = arr => {
-  /* your logic here...*/
+  const mass = [];
+  arr.forEach(obj => {
+    obj.flags.forEach(item => mass.push(item));
+  });
+  return mass;
 };
 
 export default getFlags;
