@@ -11,6 +11,7 @@ const truncate = (str, length = 0, replacer = "...") => {
   if (str === "") {
     return "";
   }
+  if (length > str.length) return str;
   const slicedStr = str.slice(0, length - replacer.length) + replacer;
   return slicedStr;
 };
